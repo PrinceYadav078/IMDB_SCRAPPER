@@ -1,8 +1,9 @@
 const request =require("request")
 const cheerio =require("cheerio")
-
+var prompt = require('prompt-sync')();
 const moviedetails=require("./processdetails")
-
+let num=prompt("Enter The Number Of Movies: ")
+let n=Number(num)
 
 function allmoviesLink(url2) {
     request(url2, function (err, response, html) {
@@ -28,7 +29,7 @@ async function getallmoviesLink(html, i) {
 
 
     let movieLinkArr = [];
-    for (let i = 0; i < 250; i++) {
+    for (let i = 0; i <n; i++) {
 
         let link = $(movieslinkarr[i]).attr('href')
         let fulllink = "https://www.imdb.com/" + link

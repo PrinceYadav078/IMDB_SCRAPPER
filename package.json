@@ -18,6 +18,7 @@
   "homepage": "https://github.com/PrinceYadav078/IMDB_SCRAPPER#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
+    "prompt-sync": "^4.2.0",
     "request": "^2.88.2",
     "xlsx": "^0.18.3"
   }
